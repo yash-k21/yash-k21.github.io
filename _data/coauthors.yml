@@ -32,3 +32,7 @@
 "planck":
   - firstname: ["Max"]
     url: https://en.wikipedia.org/wiki/Max_Planck
+
+"arora":
+  - firstname: ["Parush Arora", "Parush", "Arora"]
+    url: https://sites.google.com/view/parusharora
