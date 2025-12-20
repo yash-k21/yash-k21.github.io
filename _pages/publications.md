@@ -6,7 +6,6 @@ description:
 nav: true
 nav_order: 2
 ---
-{% include bib_search.liquid %}
 
 <hr class="section-divider">
 
@@ -16,6 +15,10 @@ nav_order: 2
 
 <hr class="section-divider">
 
+<div class="publications">
+
 {% bibliography %}
+
+</div>
 
 <hr class="section-divider">
