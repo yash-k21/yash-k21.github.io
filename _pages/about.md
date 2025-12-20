@@ -9,7 +9,7 @@ profile:
   image: prof_pic.jpeg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>yash.khaitan_ug2023@ashoka.edu.in</p>
+    # <p>yash.khaitan_ug2023@ashoka.edu.in</p>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
