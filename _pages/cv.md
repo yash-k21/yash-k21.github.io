@@ -10,10 +10,11 @@ toc:
   sidebar: none
 ---
 
-.cv-sidebar {
-  display: none;
-}
+<iframe
+  src="/assets/pdf/cv_github.pdf"
+  width="100%"
+  height="900px"
+  style="border: none;">
+</iframe>
 
-.cv-content {
-  width: 100%;
-}
+

@@ -195,6 +195,14 @@ ul.timeline li::before {
   top: -0.5rem;
 }
 
+.cv-sidebar {
+  display: none;
+}
+
+.cv-content {
+  width: 100%;
+}
+
 /*ul.timeline::before {
      content: "●";
      font-size: 1em;
