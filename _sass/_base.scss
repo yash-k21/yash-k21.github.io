@@ -1496,3 +1496,10 @@ figure.cover {
 mjx-container[jax="CHTML"][display="true"] {
   overflow-x: auto;
 }
+
+
+.section-divider {
+  margin: 3rem 0;
+  border: none;
+  border-top: 1px solid #e5e7eb; /* light gray */
+}
