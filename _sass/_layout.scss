@@ -46,6 +46,19 @@ body.sticky-bottom-footer {
 
 // TODO: redefine publications layout.
 
+/* Make publications page wider */
+.page-publications .container,
+.page-research .container {
+  max-width: 1100px;   /* try 1200px if you want it wider */
+}
+
+/* Reduce left/right padding */
+.page-publications .container,
+.page-research .container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 /*****************************************************************************
 * Projects
 *****************************************************************************/
