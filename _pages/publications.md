@@ -27,6 +27,12 @@ nav_order: 2
   Course Projects
 </h2>
 
+<hr class="section-divider">
+
+<div class="publications">
+
 {% bibliography --query @*[keywords~=course_project] %}
+
+</div>
 
 <hr class="section-divider">
