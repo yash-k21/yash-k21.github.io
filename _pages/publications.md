@@ -8,7 +8,7 @@ nav_order: 2
 ---
 
 <h2 style="text-align:center; color: var(--global-theme-color);">
-  Working Papers
+  Work in Progress
 </h2>
 
 {% bibliography --query @unpublished %}
