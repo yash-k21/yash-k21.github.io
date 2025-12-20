@@ -11,4 +11,4 @@ nav_order: 2
   Work in Progress
 </h2>
 
-{% bibliography --query @unpublished %}
+{% bibliography --query @*[note~=Work] %}
