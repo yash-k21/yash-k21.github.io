@@ -9,3 +9,11 @@ description: Click on the icon on the right to view my CV in a new window.
 toc:
   sidebar: none
 ---
+
+.cv-sidebar {
+  display: none;
+}
+
+.cv-content {
+  width: 100%;
+}
