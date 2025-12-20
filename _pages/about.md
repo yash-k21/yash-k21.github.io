@@ -25,4 +25,4 @@ latest_posts:
 ---
 
 
-My About Section
+I am a third year undergraduate student at 
