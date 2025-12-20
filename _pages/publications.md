@@ -12,17 +12,3 @@ nav_order: 2
 </h2>
 
 {% bibliography --query @unpublished %}
-
-
-
-<!-- _pages/publications.md
-
-<!-- Bibsearch Feature -->
-
-<!-- {% include bib_search.liquid %}
-
-<div class="publications">
-
-{% bibliography %}
-
-</div> --> 
