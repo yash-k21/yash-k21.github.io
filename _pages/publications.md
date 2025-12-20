@@ -17,7 +17,7 @@ nav_order: 2
 
 <div class="publications">
 
-{% bibliography %}
+{% bibliography --query @*[keywords~=work_in_progress] %}
 
 </div>
 
@@ -26,5 +26,7 @@ nav_order: 2
 <h2 style="text-align:center; color: var(--global-theme-color);">
   Course Projects
 </h2>
+
+{% bibliography --query @*[keywords~=course_project] %}
 
 <hr class="section-divider">
