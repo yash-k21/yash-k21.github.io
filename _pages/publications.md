@@ -15,6 +15,6 @@ nav_order: 2
 
 <hr class="section-divider">
 
-{% bibliography --query @*[journal~=Work] %}
+{% bibliography %}
 
 <hr class="section-divider">
