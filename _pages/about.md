@@ -26,5 +26,4 @@ latest_posts:
 ---
 
 
-
 My About Section
