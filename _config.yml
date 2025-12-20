@@ -282,7 +282,7 @@ scholar:
   details_dir: bibliography
   details_link: Details
 
-  query: "@unpublished"
+  query: "@*"
   group_by: none
   group_order: descending
 
