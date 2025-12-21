@@ -25,4 +25,12 @@ latest_posts:
 ---
 
 
-I am a third year undergraduate student at 
+I am a third-year undergraduate student majoring in Economics at Ashoka University and completing a minor in Mathematics. My interests lie in applied data science, econometrics, and geospatial analytics, with a focus on using machine learning and statistical methods to analyze real-world economic, policy, and business problems.
+
+I have worked across internships and research assistantships, focusing on the implementation and evaluation of quantitative methods on complex datasets. My work has included developing machine learning models on anthropometric and geospatial data, as well as applying causal inference methods to analyze policy and economic interventions. In addition, I have worked in spatial data science and NLP, training supervised models on satellite imagery, analyzing spatial transitions, and developing text-classification pipelines to structure and analyze large collections of unstructured documents.
+
+In parallel, I have worked extensively on computational and data-engineering workflows. This has included designing end-to-end data pipelines for large research datasets, building systems to ingest, validate, and manage structured and unstructured data, and implementing scalable preprocessing and modeling pipelines.
+
+Currently, I am working on a paper with Prof. Parush Arora on estimating the effect of natural disaster aid on local GDP recovery. Alongside this, I am strengthening my foundations in deep learning, time series forecasting, and empirical macroeconomics.
+
+Outside of work, I enjoy reading across disciplines, exploring new places and food, good coffee, following Formula 1, and running.
