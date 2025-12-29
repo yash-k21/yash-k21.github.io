@@ -1,81 +1,108 @@
 ---
 layout: page
-title: project 1
-description: with background image
-img: assets/img/12.jpg
+title: Portfolio Optimization Dashboard
+description: Interactive portfolio optimization using modern risk metrics
+img: assets/img/EfficientFrontier.png
 importance: 1
 category: work
-related_publications: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+## Overview
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+This project is an **interactive stock portfolio optimization dashboard** built using **Python and Streamlit**.  
+It allows users to construct and analyze optimal portfolios using multiple risk-adjusted performance metrics and visualize the **efficient frontier** through large-scale Monte Carlo simulations.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+🔗 **Live App:** https://portfolio-optimization.streamlit.app/  
+🔗 **GitHub Repository:** https://github.com/yash-k21/Portfolio-Optimization-Dashboard
+
+---
+
+## Core Visualizations
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
-
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/EfficientFrontier.png"
+       title="Efficient Frontier" class="img-fluid rounded z-depth-1" %}
   </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/example.png"
+       title="Portfolio Metrics Dashboard" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
-```
 
-{% endraw %}
+<div class="caption">
+Efficient frontier generated from 10,000 simulated portfolios alongside interactive portfolio performance metrics.
+</div>
+
+---
+
+## Optimization Strategies Implemented
+
+- **Sharpe Ratio** – Risk-adjusted return using total volatility  
+- **Sortino Ratio** – Downside-risk focused performance metric  
+- **Minimum Volatility** – Portfolios with lowest overall risk  
+- **Information Ratio** – Excess return per unit of tracking error  
+- **Tracking Error Minimization** – Benchmark deviation control  
+- **Conditional Value-at-Risk (CVaR)** – Tail-risk focused optimization  
+
+Each strategy leads to materially different portfolio allocations, highlighting trade-offs between risk, return, and downside exposure.
+
+---
+
+## Efficient Frontier Construction
+
+The efficient frontier is computed using **10,000 Monte Carlo portfolio simulations** with random asset weights under full-investment constraints.  
+Each point represents a feasible portfolio, enabling users to visually identify **optimal risk–return combinations** and compare them against their selected optimization objective.
+
+---
+
+## Key Features
+
+- **Interactive UI (Streamlit)** – Real-time portfolio recomputation  
+- **Dynamic Efficient Frontier** – Visual risk–return trade-offs  
+- **Benchmark Comparison** – Relative performance evaluation  
+- **Advanced Risk Metrics** – CVaR, skewness, kurtosis  
+- **Modular Architecture** – Clean separation of optimization, metrics, and risk logic  
+
+---
+
+## Model Assumptions
+
+- Historical returns proxy future expectations  
+- Asset returns assumed normally distributed  
+- No transaction costs or taxes  
+- Fully invested portfolios (no cash)  
+- Fixed investment horizon  
+
+These assumptions keep the model transparent while allowing scope for future extensions.
+
+---
+
+## Tech Stack
+
+- **Python**
+- **NumPy / Pandas**
+- **Streamlit**
+- **Matplotlib**
+- **Financial risk modeling & simulation**
+
+---
+
+## Usage
+
+1. Open the web app  
+2. Enter asset tickers, date range, and risk-free rate  
+3. Select an optimization strategy  
+4. Generate optimized portfolios and explore metrics  
+
+---
+
+## Future Extensions
+
+- Bayesian expected return estimation  
+- Regime-dependent risk modeling  
+- Transaction cost modeling  
+- Rolling-window backtesting  
+- Factor-based portfolio construction  
+
+---
