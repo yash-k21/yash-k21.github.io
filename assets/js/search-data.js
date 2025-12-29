@@ -35,9 +35,9 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather.html";
-            },},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
+            },},{id: "projects-portfolio-optimization-dashboard",
+          title: 'Portfolio Optimization Dashboard',
+          description: "Interactive portfolio optimization using modern risk metrics",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project.html";
             },},{id: "projects-project-2",
