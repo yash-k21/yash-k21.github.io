@@ -5,6 +5,7 @@ description: Interactive portfolio optimization using modern risk metrics
 img: assets/img/EfficientFrontier.png
 importance: 1
 category: work
+giscus_comments: true
 ---
 
 ## Overview
