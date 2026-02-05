@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Portfolio Optimization Dashboard
-img: assets/img/EfficientFrontier.png
+img: assets/img/PortfolioOptThumbnail.png
 importance: 1
 category: work
 giscus_comments: false
@@ -50,7 +50,7 @@ Traditional portfolio optimization tools often focus solely on mean-variance ana
 
 ---
 
-## Core Visualizations
+## Visualizations
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
@@ -64,7 +64,7 @@ Traditional portfolio optimization tools often focus solely on mean-variance ana
 </div>
 
 <div class="caption">
-Efficient frontier generated from 10,000 simulated portfolios alongside interactive portfolio performance metrics.
+Efficient frontier generated from 10,000 simulated portfolios alongside portfolio performance overlayed against a benchmark index.
 </div>
 
 - **Efficient Frontier Plot**: Visualizes the risk–return spectrum of simulated portfolios, highlighting optimal points for each strategy.
