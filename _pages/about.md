@@ -30,6 +30,6 @@ I have worked across internships and research assistantships, focusing on the im
 
 <!-- In parallel, I have worked extensively on computational and data-engineering workflows. This has included designing end-to-end data pipelines for large research datasets, building systems to ingest, validate, and manage structured and unstructured data, and implementing scalable preprocessing and modeling pipelines. -->
 
-Currently, I am working on a paper with [Prof. Parush Arora](https://sites.google.com/view/parusharora) on estimating the effect of natural disaster aid on local GDP recovery. Alongside this, I am strengthening my foundations in deep learning, time series forecasting, and empirical macroeconomics.
+Currently, I am working on a few research projects. Alongside this, I am working on developing my foundations in deep learning, time series forecasting, and empirical macroeconomics.
 
 Outside of work, I enjoy reading across disciplines, exploring new places and food, good coffee, following Formula 1, and running.
