@@ -5,6 +5,7 @@ description: another without an image
 img:
 importance: 3
 category: fun
+exclude: true
 permalink: /hidden/
 ---
 
