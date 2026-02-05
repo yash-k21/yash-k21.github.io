@@ -1,18 +1,15 @@
 ---
 layout: page
 title: Portfolio Optimization Dashboard
-description: Interactive portfolio optimization using modern risk metrics
 img: assets/img/EfficientFrontier.png
 importance: 1
 category: work
-giscus_comments: true
+giscus_comments: false
 ---
-
-# Portfolio Optimization Dashboard
 
 > **An interactive web app for constructing, analyzing, and visualizing optimal stock portfolios using modern risk metrics.**
 
-[![Live App](https://img.shields.io/badge/Live%20App-Streamlit-green?logo=streamlit)](https://portfolio-optimization.streamlit.app/) [![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/yash-k21/Portfolio-Optimization-Dashboard)
+[![Live App](https://img.shields.io/badge/Live%20App-Streamlit-green?logo=streamlit)](https://portfolio-optimization-dashboard-y.streamlit.app/) [![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/yash-k21/Portfolio-Optimization-Dashboard)
 
 ---
 
@@ -26,7 +23,7 @@ The Portfolio Optimization Dashboard is a Python and Streamlit-based web applica
 - Analyze advanced risk metrics and portfolio statistics
 - Experiment with different optimization strategies and constraints
 
-This project is designed for both individual investors and finance professionals who want to explore modern portfolio theory, risk management, and quantitative investing in an intuitive, interactive way.
+This project is designed for individual investors who want to explore modern portfolio theory, risk management, and quantitative investing in an intuitive, interactive way.
 
 ---
 
@@ -42,14 +39,14 @@ Traditional portfolio optimization tools often focus solely on mean-variance ana
 
 ## Key Features
 
-- ⚡ **Interactive UI**: Real-time portfolio recomputation and visualization
-- 📈 **Efficient Frontier**: 10,000+ Monte Carlo simulated portfolios
-- 🏆 **Multiple Optimization Strategies**: Sharpe, Sortino, Minimum Volatility, Information Ratio, Tracking Error, CVaR
-- 📊 **Advanced Risk Metrics**: CVaR, skewness, kurtosis, tracking error
-- 🔄 **Benchmark Comparison**: Evaluate portfolios relative to a chosen benchmark
-- 🧩 **Modular Architecture**: Clean separation of optimization, metrics, and risk logic
-- 🛠️ **Custom Constraints**: Full-investment, no shorting, and more
-- 📅 **Flexible Data Input**: Choose any asset tickers and date ranges
+- **Interactive UI**: Real-time portfolio recomputation and visualization
+- **Efficient Frontier**: 10,000+ Monte Carlo simulated portfolios
+- **Multiple Optimization Strategies**: Sharpe, Sortino, Minimum Volatility, Information Ratio, Tracking Error, CVaR
+- **Advanced Risk Metrics**: CVaR, skewness, kurtosis, tracking error
+- **Benchmark Comparison**: Evaluate portfolios relative to a chosen benchmark
+- **Modular Architecture**: Clean separation of optimization, metrics, and risk logic
+- **Custom Constraints**: Full-investment, no shorting, and more
+- **Flexible Data Input**: Choose any asset tickers and date ranges
 
 ---
 
@@ -73,7 +70,7 @@ Efficient frontier generated from 10,000 simulated portfolios alongside interact
 - **Efficient Frontier Plot**: Visualizes the risk–return spectrum of simulated portfolios, highlighting optimal points for each strategy.
 - **Portfolio Metrics Dashboard**: Displays key statistics (expected return, volatility, Sharpe/Sortino ratios, CVaR, skewness, kurtosis, tracking error, etc.) for selected portfolios.
 - **Allocation Pie Charts**: Instantly see how weights shift across strategies.
-- **Benchmark Comparison**: Overlay your portfolio against a benchmark (e.g., S&P 500) for context.
+- **Benchmark Comparison**: Overlay your portfolio against a benchmark (e.g., NIFTY-50) for context.
 
 ---
 
@@ -137,7 +134,7 @@ These assumptions keep the model transparent and extensible. Advanced users can 
 
 ## Usage
 
-1. Open the [Live App](https://portfolio-optimization.streamlit.app/)
+1. Open the [Live App](https://portfolio-optimization-dashboard-y.streamlit.app/)
 2. Enter your desired asset tickers, date range, and risk-free rate
 3. Select an optimization strategy (Sharpe, Sortino, etc.)
 4. Generate and explore optimized portfolios, metrics, and visualizations
@@ -145,31 +142,19 @@ These assumptions keep the model transparent and extensible. Advanced users can 
 
 ---
 
-## Example Use Cases
-
-- **Compare different risk-based portfolio allocations for your favorite stocks**
-- **Visualize how adding or removing an asset changes the efficient frontier**
-- **Assess the impact of downside risk (Sortino, CVaR) vs. traditional metrics (Sharpe)**
-- **Benchmark your custom portfolio against the S&P 500 or other indices**
-- **Experiment with new optimization strategies by extending the codebase**
-
----
-
 ## Future Extensions
 
 - Bayesian expected return estimation
 - Regime-dependent risk modeling
-- Transaction cost modeling
 - Rolling-window backtesting
 - Factor-based portfolio construction
-- User-defined constraints (sector, ESG, etc.)
 - Enhanced reporting and export options
 
 ---
 
 ## Try It Out!
 
-- [Live App](https://portfolio-optimization.streamlit.app/)
+- [Live App](https://portfolio-optimization-dashboard-y.streamlit.app/)
 - [GitHub Repository](https://github.com/yash-k21/Portfolio-Optimization-Dashboard)
 
 For questions or feedback, feel free to open an issue on GitHub or contact me directly.
