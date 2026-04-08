@@ -10,7 +10,7 @@ nav_order: 2
 <hr class="section-divider">
 
 <h2 style="text-align:center; color: var(--global-theme-color);">
-  Work in Progress
+  Working Papers
 </h2>
 
 <hr class="section-divider">
@@ -24,7 +24,7 @@ nav_order: 2
 <hr class="section-divider">
 
 <h2 style="text-align:center; color: var(--global-theme-color);">
-  Course Projects
+  Work in Progress
 </h2>
 
 <hr class="section-divider">
