@@ -61,4 +61,11 @@ ninja.data = [{
         handler: () => {
           window.open("https://www.linkedin.com/in/yash-khaitan-225594213", "_blank");
         },
+      },{
+        id: 'social-scholar',
+        title: 'Google Scholar',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://scholar.google.com/citations?user=A1F2LJIAAAAJ", "_blank");
+        },
       },];
