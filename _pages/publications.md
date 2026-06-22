@@ -24,7 +24,7 @@ nav_order: 2
 <hr class="section-divider">
 
 <h2 style="text-align:center; color: var(--global-theme-color);">
-  Work in Progress
+  Other Projects
 </h2>
 
 <hr class="section-divider">
