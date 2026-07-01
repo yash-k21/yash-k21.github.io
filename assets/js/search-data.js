@@ -23,6 +23,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
+        },{id: "nav-blog",
+          title: "blog",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/blog/";
+          },
         },{id: "nav-cv",
           title: "cv",
           description: "",
@@ -34,12 +41,12 @@ ninja.data = [{
           title: 'The Godfather',
           description: "",
           section: "Books",handler: () => {
-              window.location.href = "/books/the_godfather.html";
+              window.location.href = "/books/the_godfather/";
             },},{id: "projects-portfolio-optimization-dashboard",
           title: 'Portfolio Optimization Dashboard',
           description: "",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/1_project.html";
+              window.location.href = "/projects/1_project/";
             },},{
         id: 'social-email',
         title: 'email',
