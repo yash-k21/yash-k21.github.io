@@ -32,7 +32,7 @@ pagination:
   <div class="blog-intro">
     <p>
       This blog is a documentation of my learning. I write these posts as I learn concepts in
-      <strong>econometrics</strong>, <strong>statistics</strong>, and <strong>machine learning</strong> Consider it a living notebook that grows alongside my curiosity.
+      econometrics, statistics, and machine learning. Consider it a living notebook that grows alongside my curiosity.
     </p>
   </div>
 
