@@ -31,10 +31,8 @@ pagination:
 
   <div class="blog-intro">
     <p>
-      This blog is a documentation of my learning. I write these posts as I work through ideas in
-      <strong>econometrics</strong>, <strong>statistics</strong>, and <strong>machine learning</strong> — thinking out
-      loud, pinning down what finally clicks, and keeping an honest record of what I understand (and what I don't yet).
-      Consider it a living notebook that grows alongside my curiosity.
+      This blog is a documentation of my learning. I write these posts as I learn concepts in
+      <strong>econometrics</strong>, <strong>statistics</strong>, and <strong>machine learning</strong> Consider it a living notebook that grows alongside my curiosity.
     </p>
   </div>
 
