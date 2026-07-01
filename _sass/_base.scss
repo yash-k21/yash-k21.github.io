@@ -572,6 +572,25 @@ footer.sticky-bottom {
   }
 }
 
+.blog-intro {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+
+  p {
+    color: var(--global-text-color-light);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+
+    strong {
+      color: var(--global-text-color);
+    }
+  }
+}
+
 .tag-category-list {
   border-bottom: 1px solid var(--global-divider-color);
   text-align: center;

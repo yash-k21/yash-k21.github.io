@@ -29,6 +29,15 @@ pagination:
   </div>
   {% endif %}
 
+  <div class="blog-intro">
+    <p>
+      This blog is a documentation of my learning. I write these posts as I work through ideas in
+      <strong>econometrics</strong>, <strong>statistics</strong>, and <strong>machine learning</strong> — thinking out
+      loud, pinning down what finally clicks, and keeping an honest record of what I understand (and what I don't yet).
+      Consider it a living notebook that grows alongside my curiosity.
+    </p>
+  </div>
+
 {% if site.display_tags and site.display_tags.size > 0 or site.display_categories and site.display_categories.size > 0 %}
 
   <div class="tag-category-list">
