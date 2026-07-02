@@ -129,9 +129,9 @@ pagination:
 
     <li>
       {%- if post.thumbnail -%}
-        <div class="post-list-item">
-          <a class="post-thumbnail-wrap" href="{{ post.url | relative_url }}"><img class="post-thumbnail" src="{{ post.thumbnail | relative_url }}" alt="{{ post.title }}" /></a>
-          <div class="post-list-body">
+        <div class="post-list-item" style="display: flex; align-items: flex-start; gap: 1.25rem;">
+          <a class="post-thumbnail-wrap" href="{{ post.url | relative_url }}" style="flex: 0 0 auto;"><img class="post-thumbnail" src="{{ post.thumbnail | relative_url }}" alt="{{ post.title }}" style="width: 140px; height: 100px; object-fit: cover; border-radius: 6px; display: block;" /></a>
+          <div class="post-list-body" style="flex: 1 1 auto; min-width: 0;">
       {%- endif -%}
         <h3>
           {% if post.redirect == blank %}
