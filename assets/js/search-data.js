@@ -41,7 +41,7 @@ ninja.data = [{
         
           title: "Monte Carlo Integration",
         
-        description: "How random sampling turns an integral into an expectation, why its error shrinks like 1/√N, and a worked example.",
+        description: "The integral you cannot solve is an average you can estimate.",
         section: "Posts",
         handler: () => {
           
