@@ -13,7 +13,6 @@ thumbnail: assets/img/blogs/MCIntegration/thumb_MCInt.png  # small image shown b
 
 # published: false # KEEP this line on the template; DELETE it on real posts
 ---
-# Monte Carlo Integration
 
 *Monte Carlo integration approximates an integral by averaging random evaluations of the integrand. I derive the estimator from scratch, show why its error shrinks like $1/\sqrt{N}$, and verify everything with a worked example.*
 
