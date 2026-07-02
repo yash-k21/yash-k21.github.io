@@ -2,7 +2,7 @@
 layout: post # always "post" — do not change
 title: Monte Carlo Integration # shown as the heading and in the blog list
 date: 2026-07-02 # should match the date in the filename (YYYY-MM-DD)
-description: How random sampling turns an integral into an expectation, why its error shrinks like 1/√N, and a worked example.
+description: The integral you cannot solve is an average you can estimate.
 
 # --- optional fields (delete any you don't use) ---
 tags: statistics # space-separated; creates /blog/tag/... pages
