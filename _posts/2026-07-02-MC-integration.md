@@ -8,11 +8,11 @@ description: a one-line summary shown under the title in the blog list # recomme
 tags: statistics # space-separated; creates /blog/tag/... pages
 categories: notes # broader grouping; creates /blog/category/... pages
 # featured: true                 # pin this post to the highlighted cards on /blog/
-# thumbnail: assets/img/xyz.png  # small image shown beside the post in the list
+thumbnail: assets/img/blogs/MCIntegration/thumb_MCInt.png  # small image shown beside the post in the list
 # related_posts: false           # hide the "related posts" section at the bottom
 
-published: false # KEEP this line on the template; DELETE it on real posts
-
+# published: false # KEEP this line on the template; DELETE it on real posts
+---
 # Monte Carlo Integration
 
 *Monte Carlo integration approximates an integral by averaging random evaluations of the integrand. I derive the estimator from scratch, show why its error shrinks like $1/\sqrt{N}$, and verify everything with a worked example.*
@@ -30,9 +30,9 @@ $$
 f(x) = e^{-x^2}, \tag{2}
 $$
 
-whose antiderivative cannot be written in terms of elementary functions. The standard workaround is deterministic numerical integration, such as the [trapezoidal rule](https://en.wikipedia.org/wiki/Trapezoidal_rule), where we evaluate $f$ on a fixed grid. This works well in one dimension but degrades quickly as the dimension of the problem grows, a phenomenon known as the [curse of dimensionality](https://en.wikipedia.org/wiki/Curse_of_dimensionality).
+whose antiderivative cannot be written in terms of elementary functions. The standard workaround is deterministic numerical integration, such as the [trapezoidal rule](https://en.wikipedia.org/wiki/Trapezoidal_rule), where we evaluate $f$ on a fixed grid. This works well in one dimension but degrades quickly as the dimension of the problem grows.
 
-Monte Carlo integration takes a different approach. Rather than evaluating $f$ on a grid, we evaluate it at *random* points and average. At first glance this sounds like it should be worse. Why would randomness help? The answer, at least in my mind, is one of the most elegant ideas in computational statistics, so let's derive it.
+Monte Carlo integration takes a different approach. Rather than evaluating $f$ on a grid, we evaluate it at *random* points and average. At first glance this sounds like it should be worse. Why would randomness help? The answer rests on a single observation, which we can derive in a few lines.
 
 ## Integrals are expectations
 
@@ -83,17 +83,17 @@ $$
 \text{se}(\hat{I}_N) = \frac{(b-a)\, \sigma_f}{\sqrt{N}}. \tag{8}
 $$
 
-This is the famous $1/\sqrt{N}$ convergence rate of Monte Carlo methods. Two things about Equation 8 are worth pausing on.
+The error therefore shrinks like $1/\sqrt{N}$​. Before moving on, Equation 8 deserves two comments.
 
 First, notice what is *not* in the formula. The rate does not depend on the dimension of the problem. If we integrate over a region in $\mathbb{R}^{100}$ rather than an interval, the error still shrinks like $1/\sqrt{N}$. Deterministic grid methods cannot say the same, since covering a high-dimensional space with a grid requires exponentially many points. This is why Monte Carlo dominates in high dimensions.
 
-Second, we can estimate $\sigma_f$ from the same samples we already drew, using the sample standard deviation of the $f(U_i)$ values. Combined with the [central limit theorem](https://en.wikipedia.org/wiki/Central_limit_theorem), which tells us $\hat{I}_N$ is approximately normal for large $N$, this gives a confidence interval essentially for free:
-
+Second, Equation 8 appears to have a problem. The standard error depends on $\sigma_f$, which we do not know. If we could compute expectations of $f$ under $U$ exactly, we would not need Monte Carlo in the first place. But notice that the same draws that estimate the integral also estimate $\sigma_f$, through the sample standard deviation of the $f(U_i)$ values. And since the [central limit theorem](https://en.wikipedia.org/wiki/Central_limit_theorem) tells us $\hat{I}_N$ is approximately normal for large $N$, we immediately have a confidence interval,
+ 
 $$
 \hat{I}_N \pm 1.96 \cdot \frac{(b-a)\, \hat{\sigma}_f}{\sqrt{N}}. \tag{9}
 $$
-
-So the method not only estimates the integral, it also tells us how much to trust the estimate.
+ 
+So a Monte Carlo estimate comes bundled with a measure of its own accuracy, at no extra cost. A deterministic grid method gives no such thing.
 
 ## An example
 
@@ -136,35 +136,37 @@ estimate: 0.747045 +/- 0.003939
 truth:    0.746824
 ```
 
-The estimate is within its own confidence interval of the truth, exactly as Equation 9 promised. We can also check the convergence rate empirically by computing the average absolute error across many repetitions for increasing $N$:
-
+The estimate is within its own confidence interval of the truth, exactly as Equation 9 promised. But a single number hides the best part, so let's watch the estimator work. We can compute the estimate and its confidence band after every new sample, which only requires cumulative sums:
+ 
 ```python
-Ns = np.unique(np.logspace(1, 6, 30).astype(int))
-errors = []
-for n in Ns:
-    errs = [abs(mc_integrate(f, 0, 1, n, rng)[0] - truth)
-            for _ in range(50)]
-    errors.append(np.mean(errs))
+n_max = 5000
+u = rng.uniform(0, 1, size=n_max)
+fx = f(u)
+N = np.arange(1, n_max + 1)
+ 
+est_N = np.cumsum(fx) / N  # (b - a) = 1 here
+var_N = (np.cumsum(fx**2) / N - est_N**2) * N / np.maximum(N - 1, 1)
+se_N = np.sqrt(var_N / N)
 ```
-
-Plotting the errors on a log-log scale gives Figure 1.
-
-![Figure 1](fig1_mc.png)
-
-**Figure 1.** (Left) The integrand $f(x) = e^{-x^2}$ evaluated at $40$ uniform draws on $[0, 1]$. The Monte Carlo estimate is the average height of the blue points, scaled by the interval length. (Right) Mean absolute error of the estimator as a function of $N$, averaged over $50$ repetitions, with an $N^{-1/2}$ reference line (green). The empirical error tracks the theoretical rate almost perfectly.
-
-The empirical errors fall along the $N^{-1/2}$ reference line, confirming Equation 8. Note what the log-log slope of $-1/2$ implies in practice. To get one extra digit of accuracy, we need $100$ times more samples. Monte Carlo converges reliably, but slowly.
-
+ 
+Plotting the running estimate with its 95% band gives Figure 1.
+ 
+![Figure 1](/assets/img/blogs/MCIntegration/running_estimate.png)
+ 
+**Figure 1.** A single Monte Carlo run, watched as it accumulates samples. The blue line is the estimate $\hat{I}_N$ after $N$ draws, the shaded region is the confidence band from Equation 9, and the dashed line is the true value. The x-axis is logarithmic so that both the early wobble and the late settling are visible.
+ 
+The figure confirms everything we derived. The estimate converges to $I$ (law of large numbers), the dashed line stays inside the band (Equation 9), and the band shrinks at the slow $1/\sqrt{N}$ rate, where each extra digit of accuracy costs $100$ times more samples.
+ 
 ## Conclusion
+ 
+Monte Carlo integration rests on a single reframing, which is that an integral is an expectation in disguise, and expectations can be estimated by sample means. Everything else follows from standard results. Unbiasedness follows from linearity, consistency from the law of large numbers, and the $1/\sqrt{N}$ error rate from the variance of a sample mean. 
 
-Monte Carlo integration rests on a single reframing, which is that an integral is an expectation in disguise, and expectations can be estimated by sample means. Everything else follows from standard results. Unbiasedness follows from linearity, consistency from the law of large numbers, and the $1/\sqrt{N}$ error rate from the variance of a sample mean. The rate is slow but dimension-free, which is precisely why these methods power so much of modern statistics.
-
-The slow rate also raises a natural question. If the error depends on $\sigma_f$ through Equation 8, can we make $\sigma_f$ smaller by sampling more cleverly than uniformly? The answer is yes, and it leads to [importance sampling](https://en.wikipedia.org/wiki/Importance_sampling), which I plan to cover in a future post.
-
+The lesson I take from this is not about integration. It is that a good reframing does the work of a good idea. One line of algebra in Equation 3 turned a calculus problem into an estimation problem, and estimation problems come with a complete toolkit attached.
+ 
 ---
-
+ 
 **References**
-
+ 
 Metropolis, N., & Ulam, S. (1949). The Monte Carlo method. *Journal of the American Statistical Association*, 44(247), 335-341.
-
+ 
 Robert, C. P., & Casella, G. (2004). *Monte Carlo Statistical Methods*. Springer.
