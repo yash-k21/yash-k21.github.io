@@ -2,7 +2,7 @@
 layout: post # always "post" — do not change
 title: Monte Carlo Integration # shown as the heading and in the blog list
 date: 2026-07-02 # should match the date in the filename (YYYY-MM-DD)
-description: a one-line summary shown under the title in the blog list # recommended
+description: How random sampling turns an integral into an expectation, why its error shrinks like 1/√N, and a worked example.
 
 # --- optional fields (delete any you don't use) ---
 tags: statistics # space-separated; creates /blog/tag/... pages
