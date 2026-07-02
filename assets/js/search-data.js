@@ -37,22 +37,11 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-welcome-to-the-blog",
-        
-          title: "welcome to the blog",
-        
-        description: "notes and write-ups on things I&#39;m currently learning in econometrics, statistics, and machine learning.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/welcome/";
-          
-        },
-      },{id: "post-monte-carlo-integration",
+        },{id: "post-monte-carlo-integration",
         
           title: "Monte Carlo Integration",
         
-        description: "a one-line summary shown under the title in the blog list",
+        description: "How random sampling turns an integral into an expectation, why its error shrinks like 1/√N, and a worked example.",
         section: "Posts",
         handler: () => {
           
