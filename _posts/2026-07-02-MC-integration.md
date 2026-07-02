@@ -150,7 +150,7 @@ se_N = np.sqrt(var_N / N)
  
 Plotting the running estimate with its 95% band gives Figure 1.
  
-![Figure 1](/assets/img/blogs/MCIntegration/running_estimate.png)
+<img src="/assets/img/blogs/MCIntegration/running_estimate.png" alt="Figure 1" style="display: block; margin: 0 auto; max-width: 80%;" />
  
 **Figure 1.** A single Monte Carlo run, watched as it accumulates samples. The blue line is the estimate $\hat{I}_N$ after $N$ draws, the shaded region is the confidence band from Equation 9, and the dashed line is the true value. The x-axis is logarithmic so that both the early wobble and the late settling are visible.
  

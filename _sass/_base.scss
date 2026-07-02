@@ -945,6 +945,10 @@ pre {
     border-radius: 0;
     margin-bottom: 0;
     padding: 0;
+    // Preserve newlines/indentation for code inside code blocks
+    // (overrides the inline-code `white-space: normal` rule below)
+    white-space: inherit;
+    word-wrap: normal;
   }
 }
 
