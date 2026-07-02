@@ -37,15 +37,26 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-",
+        },{id: "post-welcome-to-the-blog",
         
-          title: "",
+          title: "welcome to the blog",
         
-        description: "",
+        description: "notes and write-ups on things I&#39;m currently learning in econometrics, statistics, and machine learning.",
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2026/2026-07-02-MC-integration/";
+            window.location.href = "/blog/2026/welcome/";
+          
+        },
+      },{id: "post-monte-carlo-integration",
+        
+          title: "Monte Carlo Integration",
+        
+        description: "a one-line summary shown under the title in the blog list",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/MC-integration/";
           
         },
       },{id: "books-the-godfather",
